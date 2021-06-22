@@ -1,12 +1,10 @@
 #adithya prabhu
 #developed jun 2021
-#How to Extract URL from a string in Python?
-
-#How to Extract URL from a string in Python?
+#latest open input in webpage
  
-import re
-all="https://meet.google.com/dgffdgdf"
-comp="https://meet.google.com/gfhfhgfhgfh"
+
+all="https://meet.google.com/uhbikuhjkhk"
+comp="https://meet.google.com/hjukuhkhj"
 rest="https://please-take-a-break.adithyarprabhu.repl.co/" #please take a break website
 
 monday_url=[all,comp,all,all,rest,rest,rest,rest]
@@ -21,8 +19,8 @@ saturday_url=[all,all,all,all,rest,rest,rest,rest]
 
 
 times=[]
-times.append("08.50")
-times.append("08.51")
+times.append("07.12")
+times.append("08.17")
 times.append("09.27")
 times.append("10.27")
 times.append("12.17")
@@ -40,7 +38,7 @@ times.append("19.30")
 
 
     
-print(times)
+
 
 
 
@@ -73,9 +71,11 @@ if day=='Monday':
         ext=input("Enter the link here(must include https and all that)--")
         monday_url.insert(pos_in_times,ext)
         y_n=input("do you have any extra sessions today ? --")
-    while Current_time >(times[0]) : # to make it start from next event 
+    while Current_time >(times[0]) :
         monday_url.remove(monday_url[0])
         times.remove(times[0])
+    print(monday_url)
+    print(times)
     for i in range(100):
         link = (monday_url[0]) 
         alarm = (times[0])
@@ -83,14 +83,10 @@ if day=='Monday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D")
-            if (monday_url[0])==rest:
-                webbrowser.open(link)
-                monday_url.remove(monday_url[0])
-                times.remove(times[0]) 
-            else: 
+            if "meet.google.com" in (monday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
@@ -103,6 +99,10 @@ if day=='Monday':
                 pyautogui.click(1150*screenWidth/1680,620*screenHeight/1050) #Join now
                 monday_url.remove(monday_url[0])
                 times.remove(times[0])
+            else:
+                webbrowser.open(link)
+                monday_url.remove(monday_url[0])
+                times.remove(times[0]) 
 elif day=='Tuesday':
     y_n=input("do you have any extra sessions today ? --")
     while "y" in y_n.lower():
@@ -116,6 +116,8 @@ elif day=='Tuesday':
     while Current_time >(times[0]) :
         tuesday_url.remove(tuesday_url[0])
         times.remove(times[0])
+    print(tuesday_url)
+    print(times)
     for i in range(100):
         link = (tuesday_url[0]) 
         alarm = (times[0])
@@ -123,14 +125,10 @@ elif day=='Tuesday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D") 
-            if (tuesday_url[0])==rest:
-                webbrowser.open(link)
-                tuesday_url.remove(tuesday_url[0])
-                times.remove(times[0]) 
-            else:
+            if "meet.google.com" in (tuesday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
@@ -141,6 +139,10 @@ elif day=='Tuesday':
                 pyautogui.hotkey('ctrl','e')
                 time.sleep(1)
                 pyautogui.click(1150*screenWidth/1680,620*screenHeight/1050) #Join now
+                tuesday_url.remove(tuesday_url[0])
+                times.remove(times[0])
+            else:
+                webbrowser.open(link)
                 tuesday_url.remove(tuesday_url[0])
                 times.remove(times[0])
 elif day=='Wednesday':
@@ -156,6 +158,8 @@ elif day=='Wednesday':
     while Current_time >(times[0]) :
         wednesday_url.remove(wednesday_url[0])
         times.remove(times[0])
+    print(wednesday_url)
+    print(times)
     for i in range(100):
         link = (wednesday_url[0]) 
         alarm = (times[0])
@@ -163,14 +167,10 @@ elif day=='Wednesday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D") 
-            if (wednesday_url[0])==rest:
-                webbrowser.open(link)
-                wednesday_url.remove(wednesday_url[0])
-                times.remove(times[0]) 
-            else:
+            if "meet.google.com" in (wednesday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
@@ -181,6 +181,10 @@ elif day=='Wednesday':
                 pyautogui.hotkey('ctrl','e')
                 time.sleep(1)
                 pyautogui.click(1150*screenWidth/1680,620*screenHeight/1050) #Join now
+                wednesday_url.remove(wednesday_url[0])
+                times.remove(times[0])
+            else:
+                webbrowser.open(link)
                 wednesday_url.remove(wednesday_url[0])
                 times.remove(times[0])
 elif day=='Thursday':
@@ -196,6 +200,8 @@ elif day=='Thursday':
     while Current_time >(times[0]) :
         thursday_url.remove(tuesday_url[0])
         times.remove(times[0])
+    print(thursday_url)
+    print(times)
     for i in range(100):
         link = (thursday_url[0]) 
         alarm = (times[0])
@@ -203,14 +209,10 @@ elif day=='Thursday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D") 
-            if (thursday_url[0])==rest:
-                webbrowser.open(link)
-                thursday_url.remove(thursday_url[0])
-                times.remove(times[0]) 
-            else:
+            if "meet.google.com" in (thursday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
@@ -221,6 +223,10 @@ elif day=='Thursday':
                 pyautogui.hotkey('ctrl','e')
                 time.sleep(1)
                 pyautogui.click(1150*screenWidth/1680,620*screenHeight/1050) #Join now
+                thursday_url.remove(thursday_url[0])
+                times.remove(times[0])
+            else:
+                webbrowser.open(link)
                 thursday_url.remove(thursday_url[0])
                 times.remove(times[0])
 elif day=='Friday':
@@ -236,6 +242,8 @@ elif day=='Friday':
     while Current_time >(times[0]) :
         friday_url.remove(friday_url[0])
         times.remove(times[0])
+    print(friday_url)
+    print(times)
     for i in range(100):
         link = (friday_url[0]) 
         alarm = (times[0])
@@ -243,14 +251,10 @@ elif day=='Friday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D") 
-            if (friday_url[0])==rest:
-                webbrowser.open(link)
-                friday_url.remove(friday_url[0])
-                times.remove(times[0]) 
-            else:
+            if "meet.google.com" in (friday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
@@ -263,6 +267,10 @@ elif day=='Friday':
                 pyautogui.click(1150*screenWidth/1680,620*screenHeight/1050) #Join now
                 friday_url.remove(friday_url[0])
                 times.remove(times[0])  
+            else:
+                webbrowser.open(link)
+                monday_url.remove(monday_url[0])
+                times.remove(times[0])
 elif day=='Saturday':
     y_n=input("do you have any extra sessions today ? --")
     while "y" in y_n.lower():
@@ -276,6 +284,8 @@ elif day=='Saturday':
     while Current_time >(times[0]) :
         saturday_url.remove(saturday_url[0])
         times.remove(times[0])
+    print(saturday_url)
+    print(times)
     for i in range(100):
         link = (saturday_url[0]) 
         alarm = (times[0])
@@ -283,14 +293,14 @@ elif day=='Saturday':
         while (Current_time != alarm): 
             print ("Waiting, the current time is " + Current_time+" :-( " )
             Current_time = time.strftime("%H.%M") 
-            time.sleep(30) 
+            time.sleep(1) 
         if (Current_time == alarm): 
             print ("WEBSITE IS OPENING :D") 
             if (saturday_url[0])==rest:
                 webbrowser.open(link)
                 saturday_url.remove(saturday_url[0])
                 times.remove(times[0]) 
-            else:
+            elif "meet.google.com" in (saturday_url[0]) : 
                 webbrowser.open(link)
                 pyautogui.press('enter')
                 time.sleep(2)
