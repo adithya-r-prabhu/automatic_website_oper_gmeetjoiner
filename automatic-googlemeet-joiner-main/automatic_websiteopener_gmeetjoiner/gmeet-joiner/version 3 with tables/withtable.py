@@ -18,8 +18,8 @@ print(day)
 Current_time = time.strftime("%H.%M")
  
 
-all="https://meet.google.com/zau-xdxk-qbb"
-comp="https://meet.google.com/ask-qvuv-thn"
+all="https://meet.google.com/ghfgffc"
+comp="https://meet.google.com/ghfghgcf"
 rest="https://please-take-a-break.adithyarprabhu.repl.co/" #please take a break website
 
 # monday_url=[all,comp,all,all,rest,rest,rest,rest]
